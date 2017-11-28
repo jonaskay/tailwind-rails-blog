@@ -1,8 +1,9 @@
 <%= form_with(model: post, local: true) do |form| %>
   <% if post.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
-
+    <div id="error_explanation" class="bg-red text-white font-bold rounded-t px-4 py-2">
+      <%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:
+    </div>
+    <div class="border border-t-0 border-red-light rounded-b bg-red-lightest px-4 py-3 text-red-dark">
       <ul>
       <% post.errors.full_messages.each do |message| %>
         <li><%= message %></li>
@@ -11,22 +12,36 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name, id: :post_name %>
+  <div class="field mb-6">
+    <%= form.label :name, 
+                   class: 'block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2' %>
+    <%= form.text_field :name, 
+                        id: :post_name,
+                        class: 'appearance-none block w-full bg-grey-lighter text-grey-darker ' +
+                               'border border-grey-lighter rounded py-3 px-4' %>
   </div>
 
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title, id: :post_title %>
+  <div class="field mb-6">
+    <%= form.label :title, 
+                   class: 'block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2' %>
+    <%= form.text_field :title, 
+                        id: :post_title,
+                        class: 'appearance-none block w-full bg-grey-lighter text-grey-darker ' + 
+                               'border border-grey-lighter rounded py-3 px-4' %>
   </div>
 
-  <div class="field">
-    <%= form.label :content %>
-    <%= form.text_area :content, id: :post_content %>
+  <div class="field mb-6">
+    <%= form.label :content,
+                   class: 'block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2' %>
+    <%= form.text_area :content, 
+                       id: :post_content, 
+                       class: 'appearance-none block w-full bg-grey-lighter text-grey-darker ' + 
+                              'border border-grey-lighter rounded py-3 px-4 mb-3',
+                       rows: 10 %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit class: 'shadow bg-purple hover:bg-purple-light text-white font-bold py-2 ' +
+                           'px-4 rounded' %>
   </div>
 <% end %>

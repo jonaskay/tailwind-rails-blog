@@ -1,19 +1,41 @@
-<p id="notice"><%= notice %></p>
+<% if notice %>
+  <p id="notice" class="bg-blue text-white text-sm font-bold px-4 py-3 mb-6">
+    <%= notice %>
+  </p>
+<% end %>
 
-<p>
-  <strong>Name:</strong>
-  <%= @post.name %>
-</p>
+<div class="mb-6">
+  <p class="uppercase tracking-wide text-grey-darker text-xs font-bold mb-2">
+    Name:
+  </p>
+  <p class="text-grey-darkest mb-3">
+    <%= @post.name %>      
+  </p>
+</div>
 
-<p>
-  <strong>Title:</strong>
-  <%= @post.title %>
-</p>
+<div class="mb-6">
+  <p class="uppercase tracking-wide text-grey-darker text-xs font-bold mb-2">
+    Title:
+  </p>
+  <p class="text-grey-darkest mb-3">
+    <%= @post.title %>
+  </p>      
+</div>
 
-<p>
-  <strong>Content:</strong>
-  <%= @post.content %>
-</p>
+<div class="mb-6">
+  <p class="uppercase tracking-wide text-grey-darker text-xs font-bold mb-2">
+    Content:
+  </p>
+  <p class="text-grey-darkest mb-3">
+    <%= @post.content %>
+  </p>      
+</div>
 
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>
+<ul class="list-reset flex mt-6 justify-center">
+  <li class="mr-6">
+    <%= link_to 'Edit', edit_post_path(@post), class: 'text-blue hover:text-blue-darker' %>
+  </li>
+  <li class="mr-6">
+    <%= link_to 'Back', posts_path, class: 'text-blue hover:text-blue-darker' %>
+  </li>
+</ul>

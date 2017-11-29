@@ -1,24 +1,18 @@
-# README
+# Tailwind Rails Blog
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is an example of a Rails (5.1) scaffold blog using Tailwind and Webpack.
 
-Things you may want to cover:
+## Requirements
 
-* Ruby version
+* Node.js
+* Yarn
+* Ruby
+* Bundler
+* PostgreSQL
 
-* System dependencies
+## Get started
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* `bundle install` to install Ruby gems
+* `yarn install` to install package dependencies
+* `rails db:create db:migrate` to create the database and run migrations
+* `rails server` to start a web server

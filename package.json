@@ -2,11 +2,11 @@
   "name": "tailwind-rails-blog",
   "private": true,
   "dependencies": {
-    "@rails/webpacker": "^3.0.2",
+    "@rails/webpacker": "^3.5.3",
     "coffeescript": "1.12.7"
   },
   "devDependencies": {
     "tailwindcss": "^0.2.2",
-    "webpack-dev-server": "^2.9.5"
+    "webpack-dev-server": "^2.11.1"
   }
 }

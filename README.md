@@ -1,6 +1,6 @@
 # Tailwind Rails Blog
 
-This is an example of a Rails (5.1) scaffold blog using Tailwind and Webpack.
+This is an example of a Rails (5.2) scaffold blog using Tailwind and Webpack.
 
 ## Requirements
 
